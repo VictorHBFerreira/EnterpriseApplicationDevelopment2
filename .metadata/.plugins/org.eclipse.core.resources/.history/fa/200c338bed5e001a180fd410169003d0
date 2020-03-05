@@ -1,0 +1,35 @@
+package br.com.fiap.jpa.dao.impl;
+
+import br.com.fiap.jpa.dao.PaisDao;
+import br.com.fiap.jpa.entity.Pais;
+import br.com.fiap.jpa.exception.CommitException;
+import br.com.fiap.jpa.exception.KeyNotFoundException;
+
+public class PaisDaoImpl implements PaisDao extends GenericDAOImp<T, K>{
+
+	@Override
+	public void cadastrar(Pais entity) {
+		
+	}
+
+	@Override
+	public void atualizar(Pais entity) {
+		
+	}
+
+	@Override
+	public Pais ler(Integer id) {
+		return null;
+	}
+
+	@Override
+	public void deletar(Integer id) throws KeyNotFoundException {
+		
+	}
+
+	@Override
+	public void commit() throws CommitException {
+		
+	}
+
+}

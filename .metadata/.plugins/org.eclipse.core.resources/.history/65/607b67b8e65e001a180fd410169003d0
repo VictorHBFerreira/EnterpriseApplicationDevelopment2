@@ -1,0 +1,30 @@
+package br.com.fiap.jpa.dao;
+
+public class GenericDaoImpl implements GenericDao{
+
+	@Override
+	public void cadastrar(Object entity) {
+		
+	}
+
+	@Override
+	public void atualizar(Object entity) {
+		
+	}
+
+	@Override
+	public Object ler(Object id) {
+		return null;
+	}
+
+	@Override
+	public void deletar(Object id) {
+		
+	}
+
+	@Override
+	public void commit() {
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package br.com.fiap.jpa.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TB_PAIS")
+@SequenceGenerator(name = "pais", sequenceName = "SQ_TB_PAIS", allocationSize = 1)
+public class Pais {
+	
+	@Id
+	@Column(name="cd_pais")
+	@GeneratedValue(generator = "pais", strategy = GenerationType.SEQUENCE)
+	private int codigo;
+	
+	private String nome;
+	
+	private Calendar 
+}

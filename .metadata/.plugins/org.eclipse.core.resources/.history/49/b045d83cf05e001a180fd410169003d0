@@ -1,0 +1,9 @@
+package br.com.fiap.view;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		
+		GenericDAO<Pais, Integer> dao = new GenericDAOImpl<Pais, Integer>(em);
+	}
+}

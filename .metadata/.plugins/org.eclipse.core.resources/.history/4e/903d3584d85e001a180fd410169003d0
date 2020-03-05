@@ -1,0 +1,91 @@
+package br.com.fiap.entity;
+
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import br.com.fiap.jpa.entity.Genero;
+
+@Entity
+@Table(name="TB_MOTORISTA")
+@SequenceGenerator(name="motorista", sequenceName = "SQ_TB_MOTORISTA")
+public class Motorista {
+	
+	@Id
+	@Column(name="nr_carteira")
+	private int numeroCarteira;
+	
+	@Column(name="nm_motorista")
+	private String nomeMotorista;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name="dt_nascimento")
+	private Calendar dataNasc;
+	
+	@Lob
+	@Column(name="fl_carteira")
+	private byte[] foto;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="ds_genero")
+	private Genero genero;
+
+	
+	public Motorista() {
+		super();
+	}
+
+
+
+	public int getNumeroCarteira() {
+		return numeroCarteira;
+	}
+
+	public void setNumeroCarteira(int numeroCarteira) {
+		this.numeroCarteira = numeroCarteira;
+	}
+
+	public String getNomeMotorista() {
+		return nomeMotorista;
+	}
+
+	public void setNomeMotorista(String nomeMotorista) {
+		this.nomeMotorista = nomeMotorista;
+	}
+
+	public Calendar getDataNasc() {
+		return dataNasc;
+	}
+
+	public void setDataNasc(Calendar dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+
+	public byte[] getFoto() {
+		return foto;
+	}
+
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+	
+	
+
+}

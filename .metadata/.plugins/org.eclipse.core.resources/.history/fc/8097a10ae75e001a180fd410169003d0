@@ -1,0 +1,8 @@
+package br.com.fiap.jpa.dao.impl;
+
+import br.com.fiap.jpa.dao.GenericDao;
+
+public class GenericDaoImpl implements GenericDao<T, K> {
+	
+
+}

@@ -1,0 +1,6 @@
+package br.com.fiap.jpa.dao;
+
+public interface CidadeDao extends GenericDao<Cidade, Integer>{
+	
+
+}

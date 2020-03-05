@@ -1,0 +1,6 @@
+package br.com.fiap.jpa.entity;
+
+public enum Estado {
+
+	SP, AM, PR, BA, SE, SC, RS, MG, TO, RJ, AC, PE, AL, RN, CE
+}

@@ -1,0 +1,19 @@
+package br.com.fiap.jpa.singleton;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+//Gerenciar a unica instancia do EntityManagerFactory
+public class EntityManagerFactorySingleton {
+	
+	//Declarar o atributo que stera uma única instancia	
+	//static -> passa a ser da classe e nao mais um objeto, nao precisa chamar
+	private static EntityManagerFactory fabrica;
+	
+	//Metodo que cria uma unica instancia
+	public static EntityManagerFactory getInstance() {
+		fabrica = Persistence.createEntityManagerFactory("oracle");
+		return fabrica;
+	}
+	
+}

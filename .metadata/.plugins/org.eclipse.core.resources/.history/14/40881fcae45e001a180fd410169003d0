@@ -1,0 +1,10 @@
+package br.com.fiap.jpa.view;
+
+public class ConsoleView {
+	
+	public static void main(String[] args) {
+		
+		new EntityManagerFactorySingleton();
+	}
+
+}

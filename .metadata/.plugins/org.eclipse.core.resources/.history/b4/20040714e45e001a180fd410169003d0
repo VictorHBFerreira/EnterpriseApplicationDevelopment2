@@ -1,0 +1,9 @@
+package br.com.fiap.jpa.singleton;
+
+//Gerenciar a unica instancia do EntityManagerFactory
+public class EntityManagerFactorySingleton {
+	
+	//Declarar o atributo que stera uma única instancia	
+	private static EntityManagerFactory fabrica;
+	
+}

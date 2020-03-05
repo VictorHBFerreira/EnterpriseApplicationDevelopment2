@@ -1,0 +1,8 @@
+package br.com.fiap.jpa.entity;
+
+public class Pais {
+	
+	private int codigo;
+	
+	
+}

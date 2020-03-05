@@ -1,0 +1,49 @@
+package br.com.fiap.jpa.dao.impl;
+
+import javax.persistence.EntityManager;
+
+import br.com.fiap.jpa.dao.GenericDao;
+import br.com.fiap.jpa.exception.CommitException;
+import br.com.fiap.jpa.exception.KeyNotFoundException;
+
+public class GenericDaoImpl<T,K> implements GenericDao<T, K> {
+
+	EntityManager em;	
+	public GenericDaoImpl(EntityManager em) {
+		this.em = em;
+	}
+	
+	@Override
+	public void cadastrar(T entity) {
+		em.persist(entity);
+		
+	}
+
+	@Override
+	public void atualizar(T entity) {
+		em.merge(entity);
+		
+	}
+
+	@Override
+	public T ler(K id) {	
+		return null;
+	}
+
+	@Override
+	public void deletar(K id) throws KeyNotFoundException {
+		if (id == null) {
+			throw new KeyNotFoundException();
+		}
+		em.remove(buscar(id));	
+		
+	}
+	@Override
+	public void commit() throws CommitException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+}

@@ -1,0 +1,19 @@
+package br.com.fiap.dao;
+
+import br.com.fiap.entity.Motorista;
+import br.com.fiap.exception.CommitException;
+import br.com.fiap.exception.DadoNaoEncontradoException;
+
+public interface MotoristaDao {
+	
+	void cadastrar(Motorista motorista);
+	
+	void atualizar(Motorista motorista);
+	
+	Motorista ler(int chave);
+	
+	void deletar (int chave) throws DadoNaoEncontradoException;
+	
+	void commit() throws CommitException;
+	
+}

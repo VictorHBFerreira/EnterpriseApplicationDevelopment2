@@ -1,0 +1,10 @@
+package br.com.fiap.jpa.dao;
+
+public interface GenericDao<T, tabela> {
+	
+	void cadastrar(T entity);
+	void atualizar(T entity);
+	int pesquisar(K chave);
+	void deletar(K chave);
+	void commit();
+}

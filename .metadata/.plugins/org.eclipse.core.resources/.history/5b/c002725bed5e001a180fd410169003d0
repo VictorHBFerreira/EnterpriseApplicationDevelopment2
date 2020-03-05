@@ -1,0 +1,7 @@
+package br.com.fiap.jpa.dao.impl;
+
+import br.com.fiap.jpa.dao.PaisDao;
+
+public class PaisDaoImpl extends GenericDaoImpl<T, K> implements PaisDao{
+
+}
